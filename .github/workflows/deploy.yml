@@ -9,6 +9,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # 添加权限配置
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -21,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Create .nojekyll file
+        run: touch ./public/.nojekyll
+
       - name: Build
         run: npx next build --no-lint
         env:
@@ -32,3 +38,4 @@ jobs:
         with:
           folder: out
           branch: gh-pages
+          token: ${{ github.token }} # 使用 GitHub 自动提供的令牌
