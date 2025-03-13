@@ -1,13 +1,13 @@
-@import 'bootstrap/scss/functions';
+@use 'bootstrap/scss/functions';
 
-@import 'variables';
+@use 'variables';
 
-@import 'bootstrap/scss/bootstrap';
+@use 'bootstrap/scss/bootstrap';
 
-@import 'loading';
-@import 'custom';
-@import 'main';
-@import 'heroSection';
-@import 'aboutSection';
-@import 'featuresSection';
-@import 'footer';
+@use 'loading';
+@use 'custom';
+@use 'main';
+@use 'heroSection';
+@use 'aboutSection';
+@use 'featuresSection';
+@use 'footer';
