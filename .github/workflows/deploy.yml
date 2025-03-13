@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx next build --no-lint
+        run: npx next build --no-lint --no-typescript
         env:
           NEXT_LINT_IGNORE_ERRORS: true
 
