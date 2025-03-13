@@ -9,8 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true, // 对于 GitHub Pages 部署需要
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/travelBlog' : '', // 替换为您的仓库名
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/travelBlog/' : '', // 替换为您的仓库名
+  basePath: process.env.NODE_ENV === 'production' ? '/Nextjs-TravelBlog' : '', // 替换为您的仓库名
+  assetPrefix:
+    process.env.NODE_ENV === 'production' ? '/Nextjs-TravelBlog/' : '', // 替换为您的仓库名
 };
 
 module.exports = nextConfig;
