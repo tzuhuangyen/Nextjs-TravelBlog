@@ -15,9 +15,8 @@ const TravelBlog: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [message, setMessage] = useState<string>('');
 
-  // 不再需要在这里定义 features，因为 FeaturesSection 组件内部已经定义了
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  // 修改 handleSubmit 函数的参数类型
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     try {
@@ -47,7 +46,7 @@ const TravelBlog: React.FC = () => {
       <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <HeroSection />
       <AboutSection />
-      <FeaturesSection /> {/* 移除 features prop */}
+      <FeaturesSection />
       <SignUpSection
         email={email}
         setEmail={setEmail}
