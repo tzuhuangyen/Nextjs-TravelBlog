@@ -1,0 +1,38 @@
+// 引入 Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// 自定義變量
+$primary-color: #135c51;
+$secondary-color: #f8b401;
+$light-color: #faf5e4;
+
+// 全局樣式
+body {
+  background-color: $light-color;
+}
+
+// 通用類
+.btn-custom {
+  &.btn-primary {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: darken($secondary-color, 5%);
+      border-color: darken($secondary-color, 5%);
+    }
+  }
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.bg-primary-custom {
+  background-color: $primary-color;
+}
+
+.text-primary-custom {
+  color: $primary-color;
+}
