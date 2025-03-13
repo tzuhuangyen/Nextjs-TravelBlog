@@ -1,16 +1,9 @@
 'use client';
 import React, { useState, FormEvent } from 'react';
-import {
-  // 移除未使用的导入
-  MapPin,
-  DollarSign,
-  Clock,
-  Bell,
-} from 'lucide-react';
+import { MapPin, DollarSign, Clock, Bell } from 'lucide-react';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
-// import TestimonialsSection from './TestimonialsSection
 import FeaturesSection from './FeaturesSection';
 import SignUpSection from './SignUpSection';
 import Footer from './Footer';
@@ -22,16 +15,7 @@ const TravelBlog: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [message, setMessage] = useState<string>('');
 
-  const features: Feature[] = [
-    { icon: <MapPin size={32} />, title: '在地攻略', desc: '深度探索當地文化' },
-    { icon: <Clock size={32} />, title: '路線規劃', desc: '智能推薦最佳路線' },
-    {
-      icon: <DollarSign size={32} />,
-      title: '預算控制',
-      desc: '詳細的花費分析',
-    },
-    { icon: <Bell size={32} />, title: '即時更新', desc: '最新旅遊資訊' },
-  ];
+  // 不再需要在这里定义 features，因为 FeaturesSection 组件内部已经定义了
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -52,7 +36,6 @@ const TravelBlog: React.FC = () => {
       setMessage('感謝您的訂閱！');
       setEmail('');
     } catch (_) {
-      // 使用下划线前缀表示有意忽略的变量
       setMessage('發生錯誤，請稍後再試。');
     } finally {
       setLoading(false);
@@ -64,7 +47,7 @@ const TravelBlog: React.FC = () => {
       <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <HeroSection />
       <AboutSection />
-      <FeaturesSection features={features} />
+      <FeaturesSection /> {/* 移除 features prop */}
       <SignUpSection
         email={email}
         setEmail={setEmail}
