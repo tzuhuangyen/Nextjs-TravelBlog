@@ -51,7 +51,7 @@ const TravelBlog: React.FC = () => {
 
       setMessage('感謝您的訂閱！');
       setEmail('');
-    } catch (_error) {
+    } catch (_) {
       // 使用下划线前缀表示有意忽略的变量
       setMessage('發生錯誤，請稍後再試。');
     } finally {
