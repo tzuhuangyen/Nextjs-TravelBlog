@@ -1,9 +1,7 @@
 'use client';
 import React, { useState, FormEvent } from 'react';
 import {
-  Menu,
-  X,
-  ChevronRight,
+  // 移除未使用的导入
   MapPin,
   DollarSign,
   Clock,
@@ -53,7 +51,8 @@ const TravelBlog: React.FC = () => {
 
       setMessage('感謝您的訂閱！');
       setEmail('');
-    } catch (error) {
+    } catch (_error) {
+      // 使用下划线前缀表示有意忽略的变量
       setMessage('發生錯誤，請稍後再試。');
     } finally {
       setLoading(false);

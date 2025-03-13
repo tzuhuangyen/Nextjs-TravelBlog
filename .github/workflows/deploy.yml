@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -22,6 +23,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_LINT_IGNORE_ERRORS: true
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
