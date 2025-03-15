@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Menu, X } from 'lucide-react';
+import styles from '../assets/Navigation.module.css';
 
 interface NavigationProps {
   isMenuOpen: boolean;
@@ -12,14 +13,7 @@ const Navigation: React.FC<NavigationProps> = ({
   setIsMenuOpen,
 }) => {
   return (
-    <nav
-      className='fixed-top w-100 py-3 px-4'
-      style={{
-        backgroundColor: 'rgba(19, 92, 81, 0.95)',
-        color: '#faf5e4',
-        zIndex: 1030,
-      }}
-    >
+    <nav className={`${styles.navbar} fixed-top w-100 py-3 px-4`}>
       <div className='container-fluid container-lg'>
         <div className='row align-items-center'>
           {/* Logo 部分 */}
@@ -32,8 +26,9 @@ const Navigation: React.FC<NavigationProps> = ({
             <div className='d-flex justify-content-center gap-4'>
               <a
                 href='#home'
-                className='text-decoration-none'
-                style={{ color: '#faf5e4', transition: 'color 0.3s' }}
+                className={styles.navLink}
+                // className='text-decoration-none'
+                // style={{ color: '#faf5e4', transition: 'color 0.3s' }}
                 onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
                 onMouseOut={(e) => (e.currentTarget.style.color = '#faf5e4')}
               >
@@ -41,8 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({
               </a>
               <a
                 href='#about'
-                className='text-decoration-none'
-                style={{ color: '#faf5e4', transition: 'color 0.3s' }}
+                className={styles.navLink}
                 onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
                 onMouseOut={(e) => (e.currentTarget.style.color = '#faf5e4')}
               >
@@ -50,8 +44,7 @@ const Navigation: React.FC<NavigationProps> = ({
               </a>
               <a
                 href='#features'
-                className='text-decoration-none'
-                style={{ color: '#faf5e4', transition: 'color 0.3s' }}
+                className={styles.navLink}
                 onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
                 onMouseOut={(e) => (e.currentTarget.style.color = '#faf5e4')}
               >
@@ -59,8 +52,7 @@ const Navigation: React.FC<NavigationProps> = ({
               </a>
               <a
                 href='#testimonials'
-                className='text-decoration-none'
-                style={{ color: '#faf5e4', transition: 'color 0.3s' }}
+                className={styles.navLink}
                 onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
                 onMouseOut={(e) => (e.currentTarget.style.color = '#faf5e4')}
               >
@@ -73,13 +65,7 @@ const Navigation: React.FC<NavigationProps> = ({
           <div className='col-md-4 d-none d-md-flex justify-content-end'>
             <a
               href='#signup'
-              className='btn fw-bold px-4 py-2'
-              style={{
-                backgroundColor: '#f8b401',
-                color: '#135c51',
-                borderRadius: '50px',
-                transition: 'all 0.3s',
-              }}
+              className={`fw-bold px-4 py-2 btn ${styles.signupButton}`}
               onMouseOver={(e) => {
                 e.currentTarget.style.backgroundColor = '#e5a601';
                 e.currentTarget.style.transform = 'translateY(-2px)';
@@ -120,8 +106,7 @@ const Navigation: React.FC<NavigationProps> = ({
           <div className='d-flex flex-column py-3'>
             <a
               href='#home'
-              className='text-center py-2 text-decoration-none'
-              style={{ color: '#faf5e4' }}
+              className={`${styles.navLink} ${styles.mobileMenuItem}`}
               onClick={() => setIsMenuOpen(false)}
               onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
               onMouseOut={(e) => (e.currentTarget.style.color = '#faf5e4')}
@@ -130,7 +115,7 @@ const Navigation: React.FC<NavigationProps> = ({
             </a>
             <a
               href='#about'
-              className='text-center py-2 text-decoration-none'
+              className={`${styles.navLink} ${styles.mobileMenuItem}`}
               style={{ color: '#faf5e4' }}
               onClick={() => setIsMenuOpen(false)}
               onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
@@ -140,8 +125,7 @@ const Navigation: React.FC<NavigationProps> = ({
             </a>
             <a
               href='#features'
-              className='text-center py-2 text-decoration-none'
-              style={{ color: '#faf5e4' }}
+              className={`${styles.navLink} ${styles.mobileMenuItem}`}
               onClick={() => setIsMenuOpen(false)}
               onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
               onMouseOut={(e) => (e.currentTarget.style.color = '#faf5e4')}
@@ -150,8 +134,7 @@ const Navigation: React.FC<NavigationProps> = ({
             </a>
             <a
               href='#testimonials'
-              className='text-center py-2 text-decoration-none'
-              style={{ color: '#faf5e4' }}
+              className={`${styles.navLink} ${styles.mobileMenuItem}`}
               onClick={() => setIsMenuOpen(false)}
               onMouseOver={(e) => (e.currentTarget.style.color = '#f8b401')}
               onMouseOut={(e) => (e.currentTarget.style.color = '#faf5e4')}
@@ -161,13 +144,7 @@ const Navigation: React.FC<NavigationProps> = ({
             <div className='text-center mt-2'>
               <a
                 href='#signup'
-                className='btn fw-bold px-4 py-2 d-inline-block'
-                style={{
-                  backgroundColor: '#f8b401',
-                  color: '#135c51',
-                  borderRadius: '50px',
-                  width: '80%',
-                }}
+                className={styles.mobileSignupButton}
                 onClick={() => setIsMenuOpen(false)}
               >
                 立即註冊

@@ -1,0 +1,14 @@
+.footer {
+  background-color: var(--primary-color);
+  color: #000000;
+}
+
+.footer a {
+  color: #faf5e4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #f8b401;
+}

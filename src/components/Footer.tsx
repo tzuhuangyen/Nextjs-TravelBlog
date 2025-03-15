@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../assets/footer.css';
 const Footer: React.FC = () => {
   return (
     <footer className='footer'>
@@ -22,18 +22,11 @@ const Footer: React.FC = () => {
                 <a href='#features'>特色服務</a>
               </li>
               <li className='mb-2'>
-                <a href='#signup'>訂閱電子報</a>
+                <a href='#signup'>註冊</a>
               </li>
             </ul>
           </div>
-          <div className='col-lg-3 col-md-6 mb-4 mb-lg-0'>
-            <h4 className='h6 mb-3'>聯絡資訊</h4>
-            <ul className='list-unstyled'>
-              <li className='mb-2'>電話：(02) 1234-5678</li>
-              <li className='mb-2'>信箱：info@travelblog.com</li>
-              <li className='mb-2'>地址：台北市信義區信義路五段</li>
-            </ul>
-          </div>
+
           <div className='col-lg-3 col-md-6'>
             <h4 className='h6 mb-3'>社群媒體</h4>
             <ul className='list-unstyled'>

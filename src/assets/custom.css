@@ -1,0 +1,72 @@
+.custom-checkout-label {
+  padding-left: 28px;
+  cursor: pointer;
+}
+
+.custom-checkout-label::after,
+.custom-checkout-label::before {
+  content: '';
+  top: 50%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.custom-checkout-label::after {
+  left: 0px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #212529; /* $gray-900 的一般值 */
+}
+
+.custom-checkout-label::before {
+  left: 10px;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: #212529; /* $gray-900 的一般值 */
+}
+
+.card-header.collapsed .custom-checkout-label::before {
+  display: none;
+}
+
+.custom-step-line {
+  position: absolute;
+}
+
+.custom-step-line::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  width: 2rem;
+  height: 0.15rem;
+  background: black;
+  transform: translate(100%, -50%);
+}
+
+/* 媒體查詢替代 @include media-breakpoint-down(md) */
+@media (max-width: 767.98px) {
+  .custom-step-line::after {
+    display: none;
+  }
+
+  .custom-header-md-open {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    left: 0px;
+  }
+
+  .opacity-1 {
+    opacity: 0.1;
+  }
+}
+
+/* 媒體查詢替代 @include media-breakpoint-up(md) */
+@media (min-width: 768px) {
+  .w-md-50 {
+    width: 50% !important;
+  }
+}

@@ -1,0 +1,48 @@
+.hero {
+  background-image: url('../../public/hero-bg.jpg'); /* 圖片路徑，假設圖片放在 public/images 目錄下 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  color: rgb(0, 0, 0);
+  margin-bottom: 80px;
+}
+
+/* 添加一個暗色覆蓋層，使文字更易讀 */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(251, 251, 251, 0.511); /* 半透明黑色覆蓋 */
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  color: rgb(0, 0, 0);
+  z-index: 2; /* 確保內容在覆蓋層之上 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字陰影增加可讀性 */
+}
+
+.heroButton {
+  background-color: var(--secondary-color, #f8b401);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none; /* 移除下劃線 */
+  text-shadow: none; /* 移除按鈕文字陰影 */
+}
+
+.heroButton:hover {
+  background-color: #e5a601;
+  transform: translateY(-3px);
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

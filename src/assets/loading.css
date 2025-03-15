@@ -1,4 +1,4 @@
-/* Loading.scss */
+/* Loading.css */
 .loading-container {
   position: fixed;
   top: 0;
@@ -17,13 +17,13 @@
 
 .plane-loader {
   position: relative;
-  width: 300px;
-  height: 100px;
+  width: 400px;
+  height: 200px;
 }
 
 .plane {
   position: absolute;
-  font-size: 24px;
+  font-size: 48px;
   color: #0284c7;
   animation: moveInCircles 6s infinite linear;
   transform-origin: center;

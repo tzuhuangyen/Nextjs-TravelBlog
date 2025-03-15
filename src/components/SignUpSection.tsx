@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../assets/Loading.css';
 interface SignUpSectionProps {
   email: string;
   setEmail: (email: string) => void;
@@ -17,11 +17,11 @@ const SignUpSection: React.FC<SignUpSectionProps> = ({
 }) => {
   return (
     <section id='signup' className='section-padding'>
-      <div className='container'>
+      <div className='container mt-5 mb-5'>
         <div className='row justify-content-center'>
           <div className='col-md-8 text-center'>
-            <h2 className='text-primary-custom mb-4'>訂閱我們的最新消息</h2>
-            <p className='lead mb-5'>獲取最新的旅遊資訊和獨家優惠</p>
+            <h2 className='text-primary-custom mb-4'>立即註冊</h2>
+            <p className='lead mb-5'>開始紀錄美好人生 分享喜悅</p>
             <form onSubmit={onSubmit}>
               <div className='row justify-content-center'>
                 <div className='col-md-8'>
@@ -39,7 +39,7 @@ const SignUpSection: React.FC<SignUpSectionProps> = ({
                       type='submit'
                       disabled={loading}
                     >
-                      {loading ? '處理中...' : '立即訂閱'}
+                      {loading ? '處理中...' : '註冊'}
                     </button>
                   </div>
                   {message && (

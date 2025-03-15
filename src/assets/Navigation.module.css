@@ -1,0 +1,59 @@
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+}
+
+.navLink {
+  color: var(--light-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: var(--secondary-color);
+}
+
+.signupButton {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s;
+}
+
+.signupButton:hover {
+  background-color: #e5a601; /* 稍微深一點的黃色 */
+  transform: translateY(-2px);
+}
+
+.mobileMenu {
+  position: absolute;
+  width: 100%;
+  top: 62px;
+  left: 0;
+  background-color: var(--primary-color);
+  z-index: 1030;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMenuItem {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.mobileSignupButton {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  width: 80%;
+  display: inline-block;
+  text-decoration: none;
+}

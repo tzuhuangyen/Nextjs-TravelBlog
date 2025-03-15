@@ -21,8 +21,8 @@ const FeaturesSection: React.FC = () => {
 
   return (
     <section id='features' className='features section-padding'>
-      <div className='container'>
-        <h2 className='text-center text-white mb-5'>特色服務</h2>
+      <div className='container mt-5 mb-5'>
+        <h2 className='text-center mb-5'>特色服務</h2>
         <div className='row'>
           {features.map((feature, index) => (
             <div key={index} className='col-md-3 mb-4'>

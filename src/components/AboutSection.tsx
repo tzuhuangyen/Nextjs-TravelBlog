@@ -1,10 +1,11 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import '../assets/aboutSection.css';
 
 const AboutSection: React.FC = () => {
   return (
     <section id='about' className='section-padding'>
-      <div className='container'>
+      <div className='container  mb-3'>
         <h2 className='text-center text-primary-custom mb-5'>關於我們</h2>
         <div className='row'>
           <div className='col-md-6'>
